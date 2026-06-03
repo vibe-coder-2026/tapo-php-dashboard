@@ -1,7 +1,7 @@
 FROM php:8.3-cli-alpine
 
 RUN apk add --no-cache tini curl-dev sqlite-dev linux-headers \
-    && docker-php-ext-install pcntl posix sqlite3 sockets
+    && docker-php-ext-install pcntl sqlite3 sockets
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
