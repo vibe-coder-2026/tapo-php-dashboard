@@ -1,5 +1,8 @@
+name: tapo-dashboard
 services:
   tapo-dashboard:
+    container_name: tapo-dashboard
+    image: "ghcr.io/vibe-coder-2026/tapo-php-dashboard:${IMAGE_TAG:-latest}"
     build: .
     restart: unless-stopped
     ports:
