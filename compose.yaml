@@ -10,7 +10,7 @@ services:
     volumes:
       - ./.env:/app/.env:ro
       - ./devices.json:/app/devices.json:ro
-      - energy-data:/app/energy.db
+      - energy-data:/app/data
     stop_grace_period: 15s
 
 volumes:
