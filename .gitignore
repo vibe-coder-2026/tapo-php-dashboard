@@ -1,0 +1,4 @@
+/vendor/
+/.env
+/devices.json
+/energy.db*

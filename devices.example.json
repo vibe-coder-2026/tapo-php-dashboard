@@ -1,0 +1,53 @@
+{
+  "devices": {
+    "tp-plug-1": {
+      "type": "tapo",
+      "host": "tp-plug-1"
+    },
+    "tp-plug-2": {
+      "type": "tapo",
+      "host": "tp-plug-2"
+    },
+    "tp-plug-3": {
+      "type": "tapo",
+      "host": "tp-plug-3"
+    },
+    "tp-kasa-plug-1": {
+      "type": "kasa",
+      "host": "tp-kasa-plug-1"
+    },
+    "tp-kasa-plug-2": {
+      "type": "kasa",
+      "host": "tp-kasa-plug-2"
+    },
+    "tp-bulb-01": {
+      "type": "bulb",
+      "host": "tp-bulb-01"
+    },
+    "tp-bulb-02": {
+      "type": "bulb",
+      "host": "tp-bulb-02"
+    },
+    "tp-plug-kitchen": {
+      "type": "tapo",
+      "host": "tp-plug-kitchen",
+      "groups": [
+        "admin",
+        "kitchen"
+      ],
+      "is_public": false
+    }
+  },
+  "groups": {
+    "Bulbs": [
+      "tp-bulb-01",
+      "tp-bulb-02"
+    ]
+  },
+  "spoof_groups": ["bed_bulbs"],
+  "min_max": {
+    "UM790": {"min": "15","max": "60"},
+    "B795M": {"min": "40","max": "100"},
+    "N5-AIR": {"min": "25","max": "85"}
+  }
+}

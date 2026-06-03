@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "84c2a5a4515eff59739510f5709a9bc3",
+    "packages": [
+        {
+            "name": "vibe-coder-2026/tapo-php",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vibe-coder-2026/tapo-php.git",
+                "reference": "895d47c321b4f57c65cf1de4319660d5fcfff924"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vibe-coder-2026/tapo-php/zipball/895d47c321b4f57c65cf1de4319660d5fcfff924",
+                "reference": "895d47c321b4f57c65cf1de4319660d5fcfff924",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tapo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP library for TP-Link Tapo smart plugs/bulbs (P100, P105, P110, L530). Based on https://github.com/almottier/TapoP100/commit/04c452fd8af9d8505e4177ba3df157372ce3ee0c",
+            "support": {
+                "issues": "https://github.com/vibe-coder-2026/tapo-php/issues",
+                "source": "https://github.com/vibe-coder-2026/tapo-php/tree/v1.1.0"
+            },
+            "time": "2026-06-03T11:46:47+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}

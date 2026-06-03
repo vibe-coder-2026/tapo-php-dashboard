@@ -1,0 +1,14 @@
+services:
+  tapo-dashboard:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "9100:9100"
+    volumes:
+      - ./.env:/app/.env:ro
+      - ./devices.json:/app/devices.json:ro
+      - energy-data:/app/energy.db
+    stop_grace_period: 15s
+
+volumes:
+  energy-data:
