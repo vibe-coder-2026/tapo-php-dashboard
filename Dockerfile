@@ -7,7 +7,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app
 
-COPY composer.json ./
+COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-interaction --prefer-dist
 
 COPY src/ src/
