@@ -718,9 +718,9 @@ function render(d) {
 }
 
 function copyI3block(id, name, btn) {
-    const label = name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_-]/g, '');
-    const host  = window.location.host;
-    const text  = '[plug_' + label + ']\ncommand=curl -sN "http://' + host + '/i3block/stream?id=' + id + '"\ninterval=persist\nformat=json';
+    const label  = name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_-]/g, '');
+    const origin = window.location.origin;
+    const text   = '[plug_' + label + ']\ncommand=curl -sN "' + origin + '/i3block/stream?id=' + id + '"\ninterval=persist\nformat=json';
     const done  = () => {
         btn.textContent = '✓';
         btn.classList.add('copied');
