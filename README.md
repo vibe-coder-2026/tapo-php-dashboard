@@ -3,6 +3,8 @@
 A self-hosted web dashboard and API for TP-Link **Tapo** (P110, L530) and **Kasa** (HS110) smart
 devices. Built in pure PHP — no Node, no framework, no WebSocket server.
 
+![Dashboard screenshot](screenshot.png)
+
 **Features**
 - Live dashboard via Server-Sent Events — state pushed to all browsers simultaneously
 - Per-device worker processes: plugs never see more than one connection regardless of browser count
