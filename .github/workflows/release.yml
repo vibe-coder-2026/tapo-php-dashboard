@@ -12,6 +12,11 @@ jobs:
       contents: write
     steps:
       - uses: softprops/action-gh-release@v2
+        if: github.server_url == 'https://github.com'
         with:
-          token: ${{ secrets.RELEASE_TOKEN || secrets.GITHUB_TOKEN }}
           generate_release_notes: true
+
+      - name: Create Gitea release
+        if: github.server_url != 'https://github.com'
+        run: |
+          curl -sf -X POST "${{ github.api_url }}/repos/${{ github.repository }}/releases" -H "Authorization: token ${{ secrets.RELEASE_TOKEN }}" -H "Content-Type: application/json" -d "{\"tag_name\":\"${{ github.ref_name }}\",\"name\":\"${{ github.ref_name }}\",\"draft\":false,\"prerelease\":false}"
