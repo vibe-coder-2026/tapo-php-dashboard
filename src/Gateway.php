@@ -340,7 +340,7 @@ class Gateway
 
         $label   = $state['name'];
         $current = (int) ($state['power_w'] ?? 0);
-        $symbol  = $state['on'] ? ' ' : '';
+        $symbol  = $state['on'] ? '⚡' : '';
         $text    = "{$label}: {$current}W{$symbol}";
 
         $minMax = $this->registry->minMax($label);
