@@ -26,4 +26,4 @@ jobs:
           push: true
           tags: |
             ${{ vars.REGISTRY_IMAGE || 'ghcr.io/vibe-coder-2026/tapo-php-dashboard' }}:latest
-            ${{ vars.REGISTRY_IMAGE || 'ghcr.io/vibe-coder-2026/tapo-php-dashboard' }}:${{ github.event.release.tag_name }}
+            ${{ vars.REGISTRY_IMAGE || 'ghcr.io/vibe-coder-2026/tapo-php-dashboard' }}:${{ github.event.release.tag_name || github.ref_name }}
